@@ -107,11 +107,22 @@ To save time in this process, the IT team suggested an ML system that detects in
 - They will not release any unhealthy cherry leaves to the market with a product of compromised quality. 
 
 
-
-
 ## Hypothesis and how to validate?
 
-- List here your project hypothesis(es) and how you envision validating it (them).
+- A binary classification machine learning model can accurately predict whether a cherry leaf is healthy or contains powdery mildew by extracting features from a dataset of cherry leaf images, with a prediction accuracy of 97%.
+
+
+## Dashboard Expectations:
+
+- A project summary page: showing the project dataset summary and the client's requirements.
+- A page listing your findings related to a study to visually differentiate a cherry leaf that is healthy from one that contains a powdery mildew.
+- A page containing:
+- - A link to download a set of cherry leave images for live prediction.
+- - A user interface with a file uploader widget, the user should be allowed to upload multiple images. Each image will be displayed along with a prediction statement indicating whether the cherry leaf is healthy or contains powdery mildew and the probability associated with this statement. 
+- - A table with the image name and prediciton results, along with a download button to download the table.
+- A page indicating your project hypothesis and how you validated it across the project. 
+- A technical page displaying model performance.
+
 
 ## The rationale to map the business requirements to the Data Visualisations and ML tasks
 
