@@ -67,7 +67,7 @@ To save time in this process, the IT team suggested an ML system that detects in
 ### Does the customer need a dashboard or API endpoint?
 
 - The customer will require a dashboard.
-- What will the dashboard need?
+- There is a dashboard expectation list further down below.
 
 ### What does success look like?
 
@@ -88,7 +88,25 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ### Ethical or Privacy concerns?
 
-- 
+- The client provided the data under an NDA (non-disclosure agreement), therefore the data should only be shared with professional that are officially involved in the project.
+
+### What level of prediction performance is needed? 
+
+- The client has agreed upon a 97% level of predicition for the performance metric accuracy. 
+
+### What are the project inputs and intended outputs?
+
+### Does the data suggest a particualr model?
+
+- The data provided suggests a binary classification model, since there will be two classifications, Healthy or Infected with Mildew.
+- This will be class 0 for Healthy and class 1 for Containing Mildew.
+
+### How will the customer benefit?
+
+- The customer will be able to quickly identify cherry leaves containing mildew or healthy. 
+- They will not release any unhealthy cherry leaves to the market with a product of compromised quality. 
+
+
 
 
 ## Hypothesis and how to validate?
@@ -101,7 +119,7 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## ML Business Case
 
-- In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course.
+- In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course. 
 
 ## Dashboard Design
 
@@ -111,6 +129,9 @@ To save time in this process, the IT team suggested an ML system that detects in
 ## Unfixed Bugs
 
 - You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+
+
+
 
 ## Deployment
 
