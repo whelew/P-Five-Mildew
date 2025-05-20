@@ -52,6 +52,45 @@ To save time in this process, the IT team suggested an ML system that detects in
 - 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
 - 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
+# New Section for Business Requirements - 20/05/25
+
+### What is the business objective requiring an ML Solution?
+
+1. Conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
+2. Predicting if a cheery leaf is healthy or contains powdery mildew.
+
+### Is the data available for the training of the model, if yes which type of data, if no how will you get the data?
+
+- Data is available, there is a dataset containing 2104 healthy cherry leaf images and 2104 cherry leaves containing powdery mildew images.
+- It will need compiling into a train, val and test set.
+
+### Does the customer need a dashboard or API endpoint?
+
+- The customer will require a dashboard.
+- What will the dashboard need?
+
+### What does success look like?
+
+- The client considers a study showing how to visually differentiate a cheery leaf that is healthy from one that contains a powdery mildew.
+- The client will be able to access a dashboard and be able to immediately check whether a cherry leaf is healthy or one that contains powdery mildew by uploading an image file of the cherry leaf.
+
+### Can you break down the project into Epics and User Stories?
+
+- Information and Data Collection
+- Data Cleaning, Preprocessing, Visualisation
+- Model Training
+- Model Fitting
+- Optimization 
+- Validation
+- Dashboard Planning and Design
+- Dashboard Development
+- Dashboard Deployment and Release
+
+### Ethical or Privacy concerns?
+
+- 
+
+
 ## Hypothesis and how to validate?
 
 - List here your project hypothesis(es) and how you envision validating it (them).
