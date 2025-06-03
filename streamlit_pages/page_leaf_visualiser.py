@@ -18,6 +18,13 @@ def page_leaf_visualiser_body():
         - The difference between average healthy and average powdery mildew cherry leaves.
         - They have also asked for an image montage for each class.
         """)
+    
+    def check_image_path_exists(image_path, caption=None):
+        if os.path.exists(image_path):
+            image = Image.open(image_path)
+            st.image(image, caption=caption, use_column_width=True)
+        else:
+            st.error(f'Image path not found {image_path}')
 
     option = st.radio(
     'Choose the visualisation you would like to see',
@@ -30,25 +37,25 @@ def page_leaf_visualiser_body():
 
     if option == 'Image Montage - Healthy':
         st.write('### Image Montage - Healthy')
-        image_montage_healthy = Image.open('outputs/images/healthy_img_montage.png')
-        st.image(image_montage_healthy, use_column_width=True)   
+        image_montage_healthy = 'outputs/images/healthy_img_montage.png'
+        check_image_path_exists(image_montage_healthy) 
 
     elif option == 'Image Montage - Powdery Mildew':
         st.write('### Image Montage - Powdery Mildew') 
-        image_montage_powdery_mildew = Image.open('outputs/images/powdery_mildew_img_montage.png')
-        st.image(image_montage_powdery_mildew, use_column_width=True)   
+        image_montage_powdery_mildew = 'outputs/images/powdery_mildew_img_montage.png'
+        check_image_path_exists(image_montage_powdery_mildew) 
 
     elif option == 'Average & Variability - Healthy':
         st.write('### Average & Variability - Healthy') 
-        avg_healthy = Image.open('outputs/images/variability_within_healthy_images.png')
-        st.image(avg_healthy, use_column_width=True) 
+        avg_healthy = 'outputs/images/variability_within_healthy_images.png'
+        check_image_path_exists(avg_healthy) 
     
     elif option == 'Average & Variability - Powdery Mildew':
         st.write('### Average & Variability - Powdery Mildew') 
-        avg_powdery_mildew = Image.open('outputs/images/variability_within_powdery_mildew_images.png')
-        st.image(avg_powdery_mildew, use_column_width=True) 
+        avg_powdery_mildew = 'outputs/images/variability_within_powdery_mildew_images.png'
+        check_image_path_exists(avg_powdery_mildew) 
     
     elif option == 'Standard Deviation - Class Comparison':
         st.write('### Standard Deviation - Class Comparison') 
-        std_class_comp = Image.open('outputs/images/std_between_img_classes.png')
-        st.image(std_class_comp, use_column_width=True) 
+        std_class_comp = 'outputs/images/std_between_img_classes.png'
+        check_image_path_exists(std_class_comp) 
