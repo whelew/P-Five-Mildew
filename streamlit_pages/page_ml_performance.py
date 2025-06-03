@@ -100,7 +100,7 @@ def page_ml_performance_metrics():
         check_csv_path_exists(cross_val_csv_path)
         st.write('---')
         st.info('Here is a classification report detailing the performance of the model.')
-        cross_val_model_rep = 'outputs/logs/class_rep_for_cross_val.txt'
+        cross_val_model_rep = 'outputs/logs/class_report_cross_val.txt'
         check_txt_path_exists(cross_val_model_rep)
         st.write('---')
         st.info('Here is a confusion matrix detailing the performance of the model.')
