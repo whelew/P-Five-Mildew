@@ -18,6 +18,5 @@ def page_summary():
         """)
     
     st.subheader('Business Requirements')
-    st.write("""1. The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
-             2. The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.  
-        """)
+    st.write('1. The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.')
+    st.write('2. The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.')
