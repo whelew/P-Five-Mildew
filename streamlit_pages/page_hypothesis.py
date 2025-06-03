@@ -13,3 +13,9 @@ def page_hypothesis():
             **Alternative Hypothesis:** A CNN model trained on cherry leaf images can reliably distinguish between
             healthy leaves and ones containing powdery mildew with at least a '97%' accuracy.
         """)
+    
+    st.success("""The null hypothesis has been rejected in favour of the alternative hypothesis.
+               The final model was successfully trained using the cherry leaf dataset provided by the client.
+               Validation: When evaluated on unseen test data, the model achieved an accuracy metric of **98.8%**, 
+               meeting and exceeding the business requirement.      
+            """)
