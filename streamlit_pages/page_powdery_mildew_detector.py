@@ -1,3 +1,5 @@
+import os 
+import gdown
 import streamlit as st
 from PIL import Image
 import numpy as np
@@ -8,7 +10,14 @@ from keras.models import load_model
 
 @st.cache_resource
 def load_final_model():
-    return load_model('outputs/models/cherry_leaf_classifier_final_model.keras')
+    model_path = 'outputs/models/cherry_leaf_classifier_final_model.keras'
+    
+    if not os.path.exists(model_path):
+        os.makedirs(os.path.dirname(model_path), exist_ok=True)
+        url = 'https://drive.google.com/file/d/1VXhDGeXFUNdGrbZzTTxy4kUcCyj6Ll2B/view?usp=sharing'
+        gdown.download(url, model_path, quiet=False)
+
+    return load_model(model_path)
 
 final_model = load_final_model()
 
