@@ -12,7 +12,7 @@ import random
 def page_ml_performance_metrics():
     st.header('Machine Learning Performance Metrics')
 
-    st.subheader('### Train, Validation and Test Set: Label Frequencies')
+    st.subheader('Train, Validation and Test Set: Label Frequencies')
 
     st.info("""
             These bar plots show the distribution of labels/classes (Healthy and Powdery Mildew) 
@@ -20,7 +20,7 @@ def page_ml_performance_metrics():
             distribution between all sets.
         """)
     
-    def check_path_exists(path):
+    def check_txt_path_exists(path):
         if os.path.exists(path):
             with open(path, 'r') as f:
                 path_read = f.read()
@@ -38,13 +38,13 @@ def page_ml_performance_metrics():
 
     col1, col2, col3 = st.columns(3)
     with col1:
-        train_labels = Image.open('outputs/images/train_set_bar_plot.png')
+        train_labels = 'outputs/images/train_set_bar_plot.png'
         check_image_path_exists(train_labels, caption='Train Label Distribution')
     with col2:
-        val_labels = Image.open('outputs/images/val_set_bar_plot.png')
+        val_labels = 'outputs/images/val_set_bar_plot.png'
         check_image_path_exists(val_labels, caption='Validation Label Distribution')
     with col3:
-        test_labels = Image.open('outputs/images/test_set_bar_plot.png')
+        test_labels = 'outputs/images/test_set_bar_plot.png'
         check_image_path_exists(test_labels, caption='Test Label Distribution')
     st.write('---')
 
@@ -53,7 +53,7 @@ def page_ml_performance_metrics():
             best hyperparameters for model optimisation. The results are shown here. 
         """)
     summary_path = 'outputs/logs/tuner_results_summary.txt'
-    check_path_exists(summary_path)
+    check_txt_path_exists(summary_path)
 
     st.write('---')
 
@@ -63,15 +63,16 @@ def page_ml_performance_metrics():
         st.info(""" After finding the best model, I fitted it using the train and validation set,
                 the batch size was set to 64, here are some plots to show the performance.
             """)
-        best_model_path = Image.open('outputs/images/best_model_history_plot.png')
-        st.image(best_model_path, caption='Best Model History Performance')
+        best_model_path = 'outputs/images/best_model_history_plot.png'
+        check_image_path_exists(best_model_path, caption='Best Model History Performance')
     with col5:
         st.info('Here is a classification report detailing the performance.')
         best_model_rep = 'outputs/logs/class_rep_for_best_model.txt'
-        check_path_exists(best_model_rep)
+        check_txt_path_exists(best_model_rep)
     with col6:
         st.info('Here is a confusion matrix detailing the performance.')
-        best_model_conf_matrix = Image.open('outputs/images/conf_matrx_for_best_model.png')
+        best_model_conf_matrix = 'outputs/images/conf_matrx_for_best_model.png'
+        check_image_path_exists(best_model_conf_matrix, caption='Best Model Confusion Matrix')
 
     st.write('---')
 
