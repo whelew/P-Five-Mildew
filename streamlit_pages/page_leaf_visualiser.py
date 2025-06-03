@@ -37,3 +37,18 @@ def page_leaf_visualiser_body():
         st.write('### Image Montage - Powdery Mildew') 
         image_montage_powdery_mildew = Image.open('outputs/images/powdery_mildew_img_montage.png')
         st.image(image_montage_powdery_mildew)   
+
+    if option == 'Average & Variability - Healthy:':
+        st.write('### Average & Variability - Healthy:') 
+        image_montage_powdery_mildew = Image.open('outputs/images/variability_within_powdery_mildew_images.png')
+        st.image(image_montage_powdery_mildew) 
+    
+    if option == 'Average & Variability - Powdery Mildew:':
+        st.write('### Average & Variability - Powdery Mildew:') 
+        image_montage_powdery_mildew = Image.open('outputs/images/variability_within_healthy_images.png')
+        st.image(image_montage_powdery_mildew) 
+    
+    if option == 'Standard Deviation - Class Comparison':
+        st.write('### Standard Deviation - Class Comparison') 
+        image_montage_powdery_mildew = Image.open('outputs/images/std_between_img_classes.png')
+        st.image(image_montage_powdery_mildew) 
