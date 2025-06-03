@@ -12,18 +12,18 @@ import random
 
 def page_leaf_visualiser_body():
     st.write('### Leaf Visualisation')
-    st.info(
-        'The client has asked for a page to visualise:'
-        '- Average images and variability images for each class which is healthy or powdery mildew.'
-        '- The difference between average healthy and average powdery mildew cherry leaves.'
-        '- They have also asked for an image montage for each class.'
-        )
+    st.info("""
+        The client has asked for a page to visualise:
+        - Average images and variability images for each class which is healthy or powdery mildew.
+        - The difference between average healthy and average powdery mildew cherry leaves.
+        - They have also asked for an image montage for each class.
+        """)
 
     option = st.radio(
-    'Choose the visualisation you would like to see:',
-    ('Average & Variability - Healthy:',
-     'Average & Variability - Powdery Mildew:',
-     'Standard Deviation - Class Comparison,'
+    'Choose the visualisation you would like to see',
+    ('Average & Variability - Healthy',
+     'Average & Variability - Powdery Mildew',
+     'Standard Deviation - Class Comparison',
      'Image Montage - Healthy',
      'Image Montage - Powdery Mildew')
     )
@@ -38,14 +38,14 @@ def page_leaf_visualiser_body():
         image_montage_powdery_mildew = Image.open('outputs/images/powdery_mildew_img_montage.png')
         st.image(image_montage_powdery_mildew, use_column_width=True)   
 
-    elif option == 'Average & Variability - Healthy:':
-        st.write('### Average & Variability - Healthy:') 
-        avg_healthy = Image.open('outputs/images/variability_within_powdery_mildew_images.png')
+    elif option == 'Average & Variability - Healthy':
+        st.write('### Average & Variability - Healthy') 
+        avg_healthy = Image.open('outputs/images/variability_within_healthy_images.png')
         st.image(avg_healthy, use_column_width=True) 
     
-    elif option == 'Average & Variability - Powdery Mildew:':
-        st.write('### Average & Variability - Powdery Mildew:') 
-        avg_powdery_mildew = Image.open('outputs/images/variability_within_healthy_images.png')
+    elif option == 'Average & Variability - Powdery Mildew':
+        st.write('### Average & Variability - Powdery Mildew') 
+        avg_powdery_mildew = Image.open('outputs/images/variability_within_powdery_mildew_images.png')
         st.image(avg_powdery_mildew, use_column_width=True) 
     
     elif option == 'Standard Deviation - Class Comparison':
