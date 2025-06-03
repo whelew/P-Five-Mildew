@@ -1,4 +1,12 @@
+import streamlit as st
 from streamlit_pages.multipage import MultiPage
+
+st.set_page_config(
+    page_title='Mildew Detection Within Cherry Leaves',
+    page_icon='🌿',
+    layout='wide'
+)
+
 from streamlit_pages import (
     page_hypothesis,
     page_leaf_visualiser,
