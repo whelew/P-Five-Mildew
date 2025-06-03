@@ -19,6 +19,9 @@ def page_powdery_mildew_detector():
             accuracy score of at least 97%.
             """)
     
+    st.success('Here is a link to a live data set containing 2104 healthy cherry leaf images and 2104 powdery mildew cherry leaf images.')
+    st.markdown("[Cherry Leaf Dataset](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)", unsafe_allow_html=True)
+    
     def predict_live_data(uploaded_image, model, target_size=(100, 100)):
         # based off notebook prediction function
         img = Image.open(uploaded_image).convert('RGB')
