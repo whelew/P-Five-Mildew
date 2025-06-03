@@ -34,6 +34,7 @@ def page_powdery_mildew_detector():
     uploaded_images = st.file_uploader('Upload Your Cherry Leaf Image', type=['jpeg', 'png', 'jpg'], accept_multiple_files=True)
 
     if uploaded_images is not None:
+        st.subheader('Prediction Results:')
         for image in uploaded_images:
             st.image(image, caption='Uploaded Cherry Leaf', use_column_width=True)
             label, prob = predict_live_data(image, final_model)
