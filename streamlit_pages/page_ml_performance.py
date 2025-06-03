@@ -38,7 +38,8 @@ def page_ml_performance_metrics():
     def check_csv_path_exists(csv_path):
         if os.path.exists(csv_path):
             csv_results_df = pd.read_csv(csv_path)
-            st.dataframe(csv_results_df)
+            csv_results_styled = csv_results_df.style.highlight_max(axis=0)
+            st.dataframe(csv_results_styled)
         else:
             st.error(f'CSV file can not be found {csv_path}')
 
@@ -117,7 +118,7 @@ def page_ml_performance_metrics():
             """)
         final_model_csv_path = 'outputs/logs/final_model_history.csv'
         check_csv_path_exists(final_model_csv_path)
-        final_model_img_path = 'outputs/images/final_model_history_plot'
+        final_model_img_path = 'outputs/images/final_model_history_plot.png'
         check_image_path_exists(final_model_img_path)
     with col11:
         st.info('Here is a classification report detailing the performance of the final model.')
@@ -125,5 +126,5 @@ def page_ml_performance_metrics():
         check_txt_path_exists( final_model_class_rep)
     with col12:
         st.info('Here is a confusion matrix detailing the performance of the model.')
-        fianl_model_conf_matrix = 'outputs/images/final_model_conf_matrix.png'
-        check_image_path_exists(fianl_model_conf_matrix, caption='Final Model Confusion Matrix')
+        final_model_conf_matrix = 'outputs/images/final_model_conf_matrix.png'
+        check_image_path_exists(final_model_conf_matrix, caption='Final Model Confusion Matrix')
