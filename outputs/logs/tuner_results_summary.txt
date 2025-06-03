@@ -3,18 +3,6 @@ Results in tuner_dir/cherry_leaf_classifier
 Showing 10 best trials
 Objective(name="val_accuracy", direction="max")
 
-Trial 0029 summary
-Hyperparameters:
-filters: 16
-add_third_conv: True
-units: 448
-learning_rate: 0.001
-tuner/epochs: 10
-tuner/initial_epoch: 0
-tuner/bracket: 0
-tuner/round: 0
-Score: 0.9955489635467529
-
 Trial 0017 summary
 Hyperparameters:
 filters: 32
@@ -26,6 +14,18 @@ tuner/initial_epoch: 4
 tuner/bracket: 2
 tuner/round: 2
 tuner/trial_id: 0013
+Score: 0.9955489635467529
+
+Trial 0029 summary
+Hyperparameters:
+filters: 16
+add_third_conv: True
+units: 448
+learning_rate: 0.001
+tuner/epochs: 10
+tuner/initial_epoch: 0
+tuner/bracket: 0
+tuner/round: 0
 Score: 0.9955489635467529
 
 Trial 0025 summary
