@@ -22,7 +22,7 @@ def page_leaf_visualiser_body():
     def check_image_path_exists(image_path, caption=None):
         if os.path.exists(image_path):
             image = Image.open(image_path)
-            st.image(image, caption=caption, use_column_width=True)
+            st.image(image, caption=caption, use_container_width=True)
         else:
             st.error(f'Image path not found {image_path}')
 
