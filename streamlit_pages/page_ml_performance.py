@@ -12,14 +12,6 @@ import random
 def page_ml_performance_metrics():
     st.header('Machine Learning Performance Metrics')
 
-    st.subheader('Train, Validation and Test Set: Label Frequencies')
-
-    st.info("""
-            These bar plots show the distribution of labels/classes (Healthy and Powdery Mildew) 
-            for the train, validation and test sets. As you can see there is a balanced
-            distribution between all sets.
-        """)
-    
     def check_txt_path_exists(path):
         if os.path.exists(path):
             with open(path, 'r') as f:
@@ -43,50 +35,60 @@ def page_ml_performance_metrics():
         else:
             st.error(f'CSV file can not be found {csv_path}')
 
-    col1, col2, col3 = st.columns(3)
-    with col1:
+    option = st.radio(
+        'Choose a section you would like to view:',
+        ('Label Distribution',
+        'Best Model Tuning Summary',
+        'Best Model History',
+        'Cross Validation Results',
+        'Final Model Performance')
+    )
+
+    if option == 'Label Distribution':
+        st.subheader('Train, Validation and Test Set: Label Frequencies')
+        st.info("""
+            These bar plots show the distribution of labels/classes (Healthy and Powdery Mildew) 
+            for the train, validation and test sets. As you can see there is a balanced
+            distribution between all sets.
+        """)
         train_labels = 'outputs/images/train_set_bar_plot.png'
         check_image_path_exists(train_labels, caption='Train Label Distribution')
-    with col2:
+        st.write('---')
         val_labels = 'outputs/images/val_set_bar_plot.png'
         check_image_path_exists(val_labels, caption='Validation Label Distribution')
-    with col3:
+        st.write('---')
         test_labels = 'outputs/images/test_set_bar_plot.png'
         check_image_path_exists(test_labels, caption='Test Label Distribution')
-    st.write('---')
+        st.write('---')
 
-    st.subheader('Best Model Summary from Hyperparameter Tuning')
-    st.info(""" Before creating the final model, I used keras tuner to find the 
-            best hyperparameters for model optimisation. The results are shown here. 
-        """)
-    summary_path = 'outputs/logs/tuner_results_summary.txt'
-    check_txt_path_exists(summary_path)
+    elif option == 'Best Model Tuning Summary':
+        st.subheader('Best Model Summary from Hyperparameter Tuning')
+        st.info(""" Before creating the final model, I used keras tuner to find the 
+                best hyperparameters for model optimisation. The results are shown here. 
+                """)
+        summary_path = 'outputs/logs/tuner_results_summary.txt'
+        check_txt_path_exists(summary_path)
+        st.write('---')
 
-    st.write('---')
-
-    st.subheader('Best Model History')
-    col4, col5, col6 = st.columns(3)
-    with col4:
+    elif option == 'Best Model History':
+        st.subheader('Best Model History')
         st.info(""" After finding the best model, I fitted it using the train and validation set,
                 the batch size was set to 64, here are some plots to show the performance.
             """)
         best_model_path = 'outputs/images/best_model_history_plot.png'
         check_image_path_exists(best_model_path, caption='Best Model History Performance')
-    with col5:
+        st.write('---')
         st.info('Here is a classification report detailing the performance.')
         best_model_rep = 'outputs/logs/class_rep_for_best_model.txt'
         check_txt_path_exists(best_model_rep)
-    with col6:
+        st.write('---')
         st.info('Here is a confusion matrix detailing the performance.')
         best_model_conf_matrix = 'outputs/images/conf_matrx_for_best_model.png'
         check_image_path_exists(best_model_conf_matrix, caption='Best Model Confusion Matrix')
+        st.write('---')
 
-    st.write('---')
-
-    st.subheader('Cross Validation Search')
-
-    col7, col8, col9 = st.columns(3)
-    with col7:
+    elif option == 'Cross Validation Results':
+        st.subheader('Cross Validation Search')
         st.info(""" After finding the best hyper parameters I created a model using them
                 as the values for my next model. This model then performed a cross validation check
                 using the stratified k-fold method. The results showed that the model was 
@@ -96,21 +98,18 @@ def page_ml_performance_metrics():
             """)
         cross_val_csv_path = 'outputs/logs/cross_validation_results.csv'
         check_csv_path_exists(cross_val_csv_path)
-    with col8:
+        st.write('---')
         st.info('Here is a classification report detailing the performance of the model.')
         cross_val_model_rep = 'outputs/logs/class_rep_for_cross_val.txt'
         check_txt_path_exists(cross_val_model_rep)
-    with col9:
+        st.write('---')
         st.info('Here is a confusion matrix detailing the performance of the model.')
         cross_val_model_conf = 'outputs/images/cross_val_conf_matrix.png'
         check_image_path_exists(cross_val_model_conf, caption='Cross Validaiton Model Confusion Matrix')
-        
-    st.write('---')
-
-    st.subheader('Final Model History')
-
-    col10, col11, col12 = st.columns(3)
-    with col10:
+        st.write('---')
+    
+    elif option == 'Final Model Performance':
+        st.subheader('Final Model History')
         st.info(""" After checking performance metrics throughout the final model was created using
                 the best hyperparameters along with the knowledge it is not over fitting. The final
                 model was trained using a full train dataset which is a combination dataset of the original
@@ -118,13 +117,15 @@ def page_ml_performance_metrics():
             """)
         final_model_csv_path = 'outputs/logs/final_model_history.csv'
         check_csv_path_exists(final_model_csv_path)
+        st.write('---')
         final_model_img_path = 'outputs/images/final_model_history_plot.png'
         check_image_path_exists(final_model_img_path)
-    with col11:
+        st.write('---')
         st.info('Here is a classification report detailing the performance of the final model.')
         final_model_class_rep = 'outputs/logs/final_model_class_report.txt'
         check_txt_path_exists( final_model_class_rep)
-    with col12:
+        st.write('---')
         st.info('Here is a confusion matrix detailing the performance of the model.')
         final_model_conf_matrix = 'outputs/images/final_model_conf_matrix.png'
         check_image_path_exists(final_model_conf_matrix, caption='Final Model Confusion Matrix')
+        st.write('---')
