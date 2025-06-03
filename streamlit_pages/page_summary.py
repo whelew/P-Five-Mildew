@@ -13,8 +13,11 @@ def page_summary():
         """)
 
     st.subheader('Client Goal')
-    st.write(""" The client has requested a machine learning that will instantly detect 
-             powdery mildew when presented with cherry leaf image data.
+    st.write(""" The client has requested a machine learning solution that can instantly detect
+             powdery mildew in cherry leaves using image data.
         """)
     
-    st.subheader('')
+    st.subheader('Business Requirements')
+    st.write("""1. The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
+             2. The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.  
+        """)
