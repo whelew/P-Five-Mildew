@@ -1,11 +1,5 @@
 import streamlit as st
 
-st.set_page_config(
-    page_title='Mildew Detection Within Cherry Leaves',
-    page_icon='🌿',
-    layout='wide'
-)
-
 class MultiPage:
     def __init__(self, app_name) -> None:
         self.pages = []
@@ -19,7 +13,7 @@ class MultiPage:
     def add_page(self, title, func):
         self.pages.append({
             'title': title,
-            'function': function
+            'function': func
         })
 
     def run(self):
