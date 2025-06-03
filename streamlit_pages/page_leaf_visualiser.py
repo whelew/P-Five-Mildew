@@ -29,7 +29,7 @@ def page_leaf_visualiser_body():
     )
 
     if option == 'Image Montage - Healthy':
-        st.write('### Image Montage')
+        st.write('### Image Montage - Healthy')
         image_montage_healthy = Image.open('outputs/images/healthy_img_montage.png')
         st.image(image_montage_healthy, use_column_width=True)   
 
