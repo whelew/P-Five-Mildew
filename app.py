@@ -7,7 +7,7 @@ from streamlit_pages import (
     page_summary
 )
 
-app = MultiPage()
+app = MultiPage(app_name='Mildew Detection Within Cherry Leaves')
 
 app.add_page('Project Summary', page_summary.page_summary)
 app.add_page('Project Hypothesis', page_hypothesis.page_hypothesis)
