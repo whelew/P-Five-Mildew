@@ -75,8 +75,8 @@ To save time in this process, the IT team suggested an ML system that detects in
 Inputs:
 
 * Cherry Leaf Image Dataset provided by the client, containing: 
-- 2104 healthy images 
-- 2104 images powdery
+* 2104 healthy images 
+* 2104 images powdery
 * [Cherry Leaves Dataset](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)
 * Preprocessed Images of size either 50*50 or 100*100.
 * Pixel values normalised by dividing by 255.0 to scale data for model training.
