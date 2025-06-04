@@ -144,8 +144,11 @@ This section highlights and details the detailed length of model training.
 - Classification Report and a Confusion Matrix for the best_model, cross_val_model and final_model.
 
 
-
 ### Powdery Mildew Detector
+
+This section contains a link to a live dataset for the client to download along with the final model.
+- Image uploader: allows client to upload an image and instantly get the classification prediction along with a prediction probability.
+- If the prediction probability it greater than 0.5 the image will be classified as powdery mildew else it will be classified as healthy.
 
 
 - List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
