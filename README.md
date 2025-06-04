@@ -1,42 +1,15 @@
-# ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Cherry Leaf Classifier
 
-## Template Instructions
+# Table of Contents
 
-Welcome,
-
-This is the Code Institute student template for the Cherry Leaves project option in Predictive Analytics. We have preinstalled all of the tools you need to get started. It's perfectly okay to use this template as the basis for your project submissions. Click the `Use this template` button above to get started.
-
-You can safely delete the Template Instructions section of this README.md file and modify the remaining paragraphs for your own project. Please do read the Template Instructions at least once, though! It contains some important information about the IDE and the extensions we use.
-
-## How to use this repo
-
-1. Use this template to create your GitHub project repo
-
-1. In your newly created repo click on the green Code button. 
-
-1. Then, from the Codespaces tab, click Create codespace on main.
-
-1. Wait for the workspace to open. This can take a few minutes.
-
-1. Open a new terminal and `pip3 install -r requirements.txt`
-
-1. Open the jupyter_notebooks directory, and click on the notebook you want to open.
-
-1. Click the kernel button and choose Python Environments.
-
-Note that the kernel says Python 3.12.1 as it inherits from the workspace, so it will be Python-3.12.1 as installed by Codespaces. To confirm this, you can use `! python --version` in a notebook code cell.
-
-## Cloud IDE Reminders
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, then you can create a new one with _Regenerate API Key_.
+## [Dataset Content](#dataset-content-1)
+## [Business Requirements](#business-requirements-1)
+- [Questions](#business-requirement-questions)
+## [Hypothesis](#hypothesis-and-how-to-validate)
+## [Dashboard Design](#dashboard-design-1)
+- [Dashboard Expectations](#dashboard-expectations)
+# [Deployment](#deployment-1)
+# [Credits](#credits-1)
 
 ## Dataset Content
 
@@ -52,29 +25,29 @@ To save time in this process, the IT team suggested an ML system that detects in
 - 1 - The client is interested in conducting a study to visually differentiate a healthy cherry leaf from one with powdery mildew.
 - 2 - The client is interested in predicting if a cherry leaf is healthy or contains powdery mildew.
 
-# New Section for Business Requirements - 20/05/25
+## Business Requirement Questions
 
-### What is the business objective requiring an ML Solution?
+#### What is the business objective requiring an ML Solution?
 
 1. Conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
 2. Predicting if a cheery leaf is healthy or contains powdery mildew.
 
-### Is the data available for the training of the model, if yes which type of data, if no how will you get the data?
+#### Is the data available for the training of the model, if yes which type of data, if no how will you get the data?
 
 - Data is available, there is a dataset containing 2104 healthy cherry leaf images and 2104 cherry leaves containing powdery mildew images.
 - It will need compiling into a train, val and test set.
 
-### Does the customer need a dashboard or API endpoint?
+#### Does the customer need a dashboard or API endpoint?
 
 - The customer will require a dashboard.
 - There is a dashboard expectation list further down below.
 
-### What does success look like?
+#### What does success look like?
 
 - The client considers a study showing how to visually differentiate a cheery leaf that is healthy from one that contains a powdery mildew.
 - The client will be able to access a dashboard and be able to immediately check whether a cherry leaf is healthy or one that contains powdery mildew by uploading an image file of the cherry leaf.
 
-### Can you break down the project into Epics and User Stories?
+#### Can you break down the project into Epics and User Stories?
 
 - Information and Data Collection
 - Data Cleaning, Preprocessing, Visualisation
@@ -86,22 +59,22 @@ To save time in this process, the IT team suggested an ML system that detects in
 - Dashboard Development
 - Dashboard Deployment and Release
 
-### Ethical or Privacy concerns?
+#### Ethical or Privacy concerns?
 
 - The client provided the data under an NDA (non-disclosure agreement), therefore the data should only be shared with professional that are officially involved in the project.
 
-### What level of prediction performance is needed? 
+#### What level of prediction performance is needed? 
 
 - The client has agreed upon a 97% level of predicition for the performance metric accuracy. 
 
-### What are the project inputs and intended outputs?
+#### What are the project inputs and intended outputs?
 
-### Does the data suggest a particualr model?
+#### Does the data suggest a particualr model?
 
 - The data provided suggests a binary classification model, since there will be two classifications, Healthy or Infected with Mildew.
 - This will be class 0 for Healthy and class 1 for Containing Mildew.
 
-### How will the customer benefit?
+#### How will the customer benefit?
 
 - The customer will be able to quickly identify cherry leaves containing mildew or healthy. 
 - They will not release any unhealthy cherry leaves to the market with a product of compromised quality. 
@@ -111,8 +84,9 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 - A binary classification machine learning model can accurately predict whether a cherry leaf is healthy or contains powdery mildew by extracting features from a dataset of cherry leaf images, with a prediction accuracy of 97%.
 
+## Dashboard Design
 
-## Dashboard Expectations:
+### Dashboard Expectations:
 
 - A project summary page: showing the project dataset summary and the client's requirements.
 - A page listing your findings related to a study to visually differentiate a cherry leaf that is healthy from one that contains a powdery mildew.
