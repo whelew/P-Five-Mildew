@@ -82,7 +82,15 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 ## Hypothesis and how to validate?
 
-- A binary classification machine learning model can accurately predict whether a cherry leaf is healthy or contains powdery mildew by extracting features from a dataset of cherry leaf images, with a prediction accuracy of 97%.
+- This project explores whether a convolutional neural network (CNN) based binary classification model can accurately classify cherry leaves as either healthy or ones containing powdery mildew. The model will be able to achieve a prediction accuracy of at least a **97%**.
+
+### Null Hypothesis
+
+A CNN model trained on cherry leaf images cannot reliably distinguish between healthy leaves and ones containing powdery mildew better than random chance (**50%** accuracy).
+
+### Alternative Hypothesis
+
+A CNN model trained on cherry leaf images can reliably distinguish between healthy leaves and ones containing powdery mildew with at least a **97%** accuracy.
 
 ## Dashboard Design
 
