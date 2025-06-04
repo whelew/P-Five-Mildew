@@ -33,7 +33,7 @@ To save time in this process, the IT team suggested an ML system that detects in
 #### What is the business objective requiring an ML Solution?
 
 1. Conducting a study to visually differentiate a cherry leaf that is healthy from one that contains powdery mildew.
-2. Predicting if a cheery leaf is healthy or contains powdery mildew.
+2. Predicting if a cherry leaf is healthy or contains powdery mildew.
 
 #### Is the data available for the training of the model, if yes which type of data, if no how will you get the data?
 
@@ -47,7 +47,7 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 #### What does success look like?
 
-- The client considers a study showing how to visually differentiate a cheery leaf that is healthy from one that contains a powdery mildew.
+- The client considers a study showing how to visually differentiate a cherry leaf that is healthy from one that contains a powdery mildew.
 - The client will be able to access a dashboard and be able to immediately check whether a cherry leaf is healthy or one that contains powdery mildew by uploading an image file of the cherry leaf.
 
 #### Can you break down the project into Epics and User Stories?
@@ -71,6 +71,8 @@ To save time in this process, the IT team suggested an ML system that detects in
 - The client has agreed upon a 97% level of predicition for the performance metric accuracy. 
 
 #### What are the project inputs and intended outputs?
+
+
 
 #### Does the data suggest a particualr model?
 
@@ -186,7 +188,7 @@ Slug Size did become an issue, it might be due to the size of my model as it is 
 - Used to handle image arrays and numerical operations, normalisation.
 - Example: np.array(img) / 255.0
 ### [Pandas](https://pandas.pydata.org/):
-- This was used to manage and manipualte datasets, such as image paths, labels, CSV logs. 
+- This was used to manage and manipulate datasets, such as image paths, labels, CSV logs. 
 - Example: pd.read_csv('outputs/logs/final_model_history.csv')
 ### [Matplotlib](https://matplotlib.org/):
 - Matplotlib was used for image plotting during image analysis, along with performance metrics, training history plots.
@@ -198,7 +200,7 @@ Slug Size did become an issue, it might be due to the size of my model as it is 
 - This was used to build, tune, train and evaluate my convolutional neural network (CNN) model.
 - Example: model.fit(), load_model()
 ### [Scikit Learn](https://scikit-learn.org/stable/):
-- This was used for classificaiton reports, cross validation, confusion matrixs.
+- This was used for classification reports, cross validation, confusion matrixs.
 - Example: from sklearn.model_selection import StratifiedKFold, skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=SEED)
 - Example: Also used for train_test_split during dataset creation 
 ### [PIL](https://pypi.org/project/pillow/):
