@@ -141,29 +141,29 @@ A CNN model trained on cherry leaf images can reliably distinguish between healt
 
 ## Main Data Analysis and Machine Learning Libraries
 
-### [Numpy]():
+### [Numpy](https://jupyter.org/):
 - Used to handle image arrays and numerical operations, normalisation.
 - Example: np.array(img) / 255.0
-### [Pandas]():
+### [Pandas](https://pandas.pydata.org/):
 - This was used to manage and manipualte datasets, such as image paths, labels, CSV logs. 
 - Example: pd.read_csv('outputs/logs/final_model_history.csv')
-### [Matplotlib]():
+### [Matplotlib](https://matplotlib.org/):
 - Matplotlib was used for image plotting during image analysis, along with performance metrics, training history plots.
 - Example: plt.imshow(avg_image) 
-### [Seaborn]():
+### [Seaborn](https://seaborn.pydata.org/):
 - This was used to create advanced plot during label distribution visualisation.
 - Example: sns.countplot(x=y_labels)
-### [Tensorflow]():
+### [Tensorflow](https://www.tensorflow.org/):
 - This was used to build, tune, train and evaluate my convolutional neural network (CNN) model.
 - Example: model.fit(), load_model()
-### [Scikit Learn]():
+### [Scikit Learn](https://scikit-learn.org/stable/):
 - This was used for classificaiton reports, cross validation, confusion matrixs.
 - Example: from sklearn.model_selection import StratifiedKFold, skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=SEED)
 - Example: Also used for train_test_split during dataset creation 
-### [PIL]():
+### [PIL](https://pypi.org/project/pillow/):
 - This was used to load and preprocess images.
 - Example: Image.open(image_path).convert('RGB')
-### [Keras]():
+### [Keras](https://keras.io/):
 - Used for model tuning and label encoding, building models.
 - Example: y_train_encoded = label_encoder.fit_transform(y_train)
 - Note: keras is part of tensorflow however I had to import it as keras.models or keras import layers
@@ -179,23 +179,11 @@ Here is a list of documents I used to help create my project.
 5. [Keras Documentation](https://keras.io/api/)
 6. [TensorFlow Documentation](https://www.tensorflow.org/api_docs)
 7. [Numpy Documentation](https://numpy.org/doc/)
-8. [Slack](https://app.slack.com/) provided useful when also researching issues and bugs as I was able to look at other students projects and see how they fixed previous similar issues.
+8. [Slack](https://app.slack.com/)
 9. [Pandas](https://pandas.pydata.org/docs/)
 10. [Matplotlib Documentation](https://matplotlib.org/stable/index.html)
 11. [Seaborn Documentation](https://seaborn.pydata.org/)
 12. [Kaggle](https://www.kaggle.com/)
-
-### Content
-
-- The text for the Home page was taken from Wikipedia Article A.
-- Instructions on how to implement form validation on the Sign-Up page were taken from [Specific YouTube Tutorial](https://www.youtube.com/).
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
-
-### Media
-
-- The photos used on the home and sign-up page are from This Open-Source site.
-- The images used for the gallery page were taken from this other open-source site.
-
-## Acknowledgements (optional)
-
-- Thank the people who provided support throughout this project.
+13. [Scikit-learn Documentation](https://scikit-learn.org/stable/)
+14. [Code Institute](https://codeinstitute.net/)
+15. [PIL Documentation](https://pillow.readthedocs.io/en/stable/)
