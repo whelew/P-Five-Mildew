@@ -54,4 +54,15 @@ def page_powdery_mildew_detector():
                 st.warning(f'**Prediction:** {label}')
             st.write(f'**Prediction Probability:** {prob:.2%}')
             st.write('---')
+
+            # Add a slider for interactivity
+            st.write('The prediction probability is the confidence of the model.')
+            st.write('If the prediction probability is greater than 0.5 (50%) it will be predicted as powdery mildew.')
+            st.write('If the prediction probability if it is equal to or lower than 0.5 (50%) it will be predicted as healthy.')
+            st.write('Try adjusting the threshold of the models confidence to see the change in classification.')
+            confidence = st.slider('Set prediction confidence threshold:', 0.0, 1.0, 0.5, 0.01)
+            if prob > confidence:
+                st.warning(f'Predicted: Powdery Mildew ({prob:.2f})')
+            else:
+                st.success(f'Predicted: Healthy ({1 - prob:.2f})')
     

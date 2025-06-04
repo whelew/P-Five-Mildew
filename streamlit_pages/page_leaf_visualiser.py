@@ -35,6 +35,7 @@ def page_leaf_visualiser_body():
      'Image Montage - Powdery Mildew')
     )
 
+
     if option == 'Image Montage - Healthy':
         st.write('### Image Montage - Healthy')
         image_montage_healthy = 'outputs/images/healthy_img_montage.png'
