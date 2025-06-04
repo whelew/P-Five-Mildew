@@ -155,14 +155,18 @@ A CNN model trained on cherry leaf images can reliably distinguish between healt
 - Example: sns.countplot(x=y_labels)
 ### [Tensorflow]():
 - This was used to build, tune, train and evaluate my convolutional neural network (CNN) model.
-- Example: keras.tuner, tuner.search(), model.fit(), load_model()
+- Example: model.fit(), load_model()
 ### [Scikit Learn]():
 - This was used for classificaiton reports, cross validation, confusion matrixs.
-- Example: from sklearn.model_selection import StratifiedKFold, skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=SEED) 
+- Example: from sklearn.model_selection import StratifiedKFold, skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=SEED)
+- Example: Also used for train_test_split during dataset creation 
 ### [PIL]():
 - This was used to load and preprocess images.
 - Example: Image.open(image_path).convert('RGB')
-### []
+### [Keras]():
+- Used for model tuning and label encoding, building models.
+- Example: y_train_encoded = label_encoder.fit_transform(y_train)
+- Note: keras is part of tensorflow however I had to import it as keras.models or keras import layers
 
 ## Credits
 
