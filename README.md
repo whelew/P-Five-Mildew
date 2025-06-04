@@ -116,6 +116,26 @@ A CNN model trained on cherry leaf images can reliably distinguish between healt
 
 ## Dashboard Design
 
+### Project Summary
+
+This provides an overview of the project to the client, acknowledging the business case requirements, the main cause for the business case and the goals of the client. 
+
+### Project Hypothesis
+
+This provides the client with a general hypothesis, a null hypothesis and a alternative hypothesis. The final model performance is presented as evidence in favour of the alternative hypothesis and not in favour of the null hypothesis.
+
+### Leaf Visualisation
+
+This section provides the client with:
+- Insight into image variability within individual classes. (Healthy and Powdery Mildew)
+- Insight into image standard deviation between classes. (Healthy against Powder Mildew)
+- It also provides an image montage of both healthy leaves and leaves infected with powdery mildew.
+
+### ML Performance Metrics
+
+### Powdery Mildew Detector
+
+
 - List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
 - Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
 
