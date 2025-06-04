@@ -1,5 +1,5 @@
+from huggingface_hub import hf_hub_download
 import os 
-import gdown
 import streamlit as st
 from PIL import Image
 import numpy as np
@@ -10,16 +10,10 @@ from keras.models import load_model
 
 @st.cache_resource
 def load_final_model():
-    model_path = 'outputs/models/cherry_leaf_classifier_final_model.keras'
-    
-    if not os.path.exists(model_path):
-        os.makedirs(os.path.dirname(model_path), exist_ok=True)
-        url = 'https://drive.google.com/file/d/1VXhDGeXFUNdGrbZzTTxy4kUcCyj6Ll2B'
-        output= gdown.download(url, model_path, quiet=False)
-
-        if output is None or not os.path.exists(model_path):
-            raise FileNotFoundError("Model download failed or model file not found.")
-
+    model_path = hf_hub_download(
+        repo_id="whelew/cherry-leaf-mildew-detector",
+        filename="cherry_leaf_classifier_final_model.keras"
+    )
     return load_model(model_path)
 
 final_model = load_final_model()
