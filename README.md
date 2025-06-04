@@ -72,7 +72,22 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 #### What are the project inputs and intended outputs?
 
+Inputs:
 
+* Cherry Leaf Image Dataset provided by the client, containing: 
+- 2104 healthy images 
+- 2104 images powdery
+* [Cherry Leaves Dataset](https://www.kaggle.com/datasets/codeinstitute/cherry-leaves)
+* Preprocessed Images of size either 50*50 or 100*100.
+* Pixel values normalised by dividing by 255.0 to scale data for model training.
+* Target labels/classes: 'healthy', 'podwery_mildew'
+
+Outputs:
+
+* A trained CNN-based deep learning model.
+* Visualisation of image data, label distributions, model history and performance metrics.
+* A final model fully that generalises well on unseen test data with an accuracy of 97% or higher.
+* A deployed streamlit dashboard that allows users to upload an image of a cherry leaf and instantly detect whether it contains powdery mildew or it is healthy.
 
 #### Does the data suggest a particular model?
 
