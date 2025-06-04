@@ -170,8 +170,20 @@ A CNN model trained on cherry leaf images can reliably distinguish between healt
 
 ## Credits
 
-- In this section, you need to reference where you got your content, media and from where you got extra help. It is common practice to use code from other repositories and tutorials. However, it is necessary to be very specific about these sources to avoid plagiarism.
-- You can break the credits section up into Content and Media, depending on what you have included in your project.
+Here is a list of documents I used to help create my project.
+
+1. [Jupyter Notebook Documentation](https://docs.jupyter.org/en/latest/) 
+2. [Python Documentation](https://docs.python.org/) 
+3. [Streamlit Documentation](https://docs.streamlit.io/) 
+4. [Stack Overflow](https://stackoverflow.com/)
+5. [Keras Documentation](https://keras.io/api/)
+6. [TensorFlow Documentation](https://www.tensorflow.org/api_docs)
+7. [Numpy Documentation](https://numpy.org/doc/)
+8. [Slack](https://app.slack.com/) provided useful when also researching issues and bugs as I was able to look at other students projects and see how they fixed previous similar issues.
+9. [Pandas](https://pandas.pydata.org/docs/)
+10. [Matplotlib Documentation](https://matplotlib.org/stable/index.html)
+11. [Seaborn Documentation](https://seaborn.pydata.org/)
+12. [Kaggle](https://www.kaggle.com/)
 
 ### Content
 
