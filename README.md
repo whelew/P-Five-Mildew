@@ -130,8 +130,20 @@ This section provides the client with:
 - Insight into image variability within individual classes. (Healthy and Powdery Mildew)
 - Insight into image standard deviation between classes. (Healthy against Powder Mildew)
 - It also provides an image montage of both healthy leaves and leaves infected with powdery mildew.
+- It includes a radio button allowing the client to select a specific section of the image analysis. 
 
 ### ML Performance Metrics
+
+This section highlights and details the detailed length of model training.
+- It includes the best results from keras tuner during hyperparameter optimisation, the best hyperparameters were used as the main values for the final model.
+- Plots of training and validation accuracy for: 
+1. The best_model (tuner.search() model).
+2.  The cross validation model (using best_model hyperparameters).
+3. The final model, trained using a full dataset (combination of train and validation sets).
+- The cross validation model also provides metrics confirming generalisation performance over multipel folds.
+- Classification Report and a Confusion Matrix for the best_model, cross_val_model and final_model.
+
+
 
 ### Powdery Mildew Detector
 
