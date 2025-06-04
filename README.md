@@ -187,3 +187,7 @@ Here is a list of documents I used to help create my project.
 13. [Scikit-learn Documentation](https://scikit-learn.org/stable/)
 14. [Code Institute](https://codeinstitute.net/)
 15. [PIL Documentation](https://pillow.readthedocs.io/en/stable/)
+
+- The Code Institute modules were very useful in helping understand workflow and structure of my jupyter notebook. 
+- The Code Institute [mildew detection template](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PA_PAGPPF+2/courseware/bde016cdbd184cdeafd341a73807e138/bd2104eb84de4e48a9df6f685773cbf2/) was a very helpful base for the readme file, I also use the recommended business case.
+- The Code Institute Walkthrough [malria detector](https://learn.codeinstitute.net/courses/course-v1:code_institute+CI_DA_ML+3/courseware/07a3964f7a72407ea3e073542a2955bd/29ae4b4c67ed45a8a97bb9f4dcfa714b/) project also gave insight for structure and general code practice of jupyter notebooks.
