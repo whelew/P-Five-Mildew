@@ -14,7 +14,7 @@ def load_final_model():
     
     if not os.path.exists(model_path):
         os.makedirs(os.path.dirname(model_path), exist_ok=True)
-        url = 'https://drive.google.com/file/d/1VXhDGeXFUNdGrbZzTTxy4kUcCyj6Ll2B/view?usp=drive_link'
+        url = 'https://drive.google.com/file/d/1VXhDGeXFUNdGrbZzTTxy4kUcCyj6Ll2B'
         output= gdown.download(url, model_path, quiet=False)
 
         if output is None or not os.path.exists(model_path):
