@@ -1,4 +1,9 @@
 import streamlit as st
+st.set_page_config(
+    page_title="Cherry Leaf Mildew Classifier",
+    page_icon="🌿",  # optional: adds a favicon in the browser tab
+)
+
 
 from streamlit_pages.multipage import MultiPage
 from streamlit_pages import (
