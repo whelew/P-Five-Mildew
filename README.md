@@ -8,8 +8,11 @@
 ## [Hypothesis](#hypothesis-and-how-to-validate)
 ## [Dashboard Design](#dashboard-design-1)
 - [Dashboard Expectations](#dashboard-expectations)
-# [Deployment](#deployment-1)
-# [Credits](#credits-1)
+## [Bugs](#bugs-1)
+## [Technology Used](#main-data-analysis-and-machine-learning-libraries)
+## [Deployment](#deployment-1)
+## [Credits](#credits-1)
+
 
 ## Dataset Content
 
