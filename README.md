@@ -135,6 +135,7 @@ This section provides the client with:
 ### ML Performance Metrics
 
 This section highlights and details the detailed length of model training.
+- Originally used columns for navigation and layouy, however this caused the information to be difficult to read so a radio option was added instead, this allowed for easier and clearer navigation. 
 - It includes the best results from keras tuner during hyperparameter optimisation, the best hyperparameters were used as the main values for the final model.
 - Plots of training and validation accuracy for: 
 1. The best_model (tuner.search() model).
@@ -150,13 +151,15 @@ This section contains a link to a live dataset for the client to download along 
 - Image uploader: allows client to upload an image and instantly get the classification prediction along with a prediction probability.
 - If the prediction probability it greater than 0.5 the image will be classified as powdery mildew else it will be classified as healthy.
 
+## Bugs
 
-- List all dashboard pages and their content, either blocks of information or widgets, like buttons, checkboxes, images, or any other items, that your dashboard library supports.
-- Finally, during the project development, you may revisit your dashboard plan to update a given feature (for example, at the beginning of the project, you were confident you would use a given plot to display an insight, but later, you chose another plot type).
+### Reproducibility:
 
-## Unfixed Bugs
+One difficulty during the building and training of the model was reproducibility. After working on the project for a day and coming back and having to rerun all the cell blocks the output of fitting and training was always different meaning the analysis of history plots or confusion matrix's had to be updated. This became quite frustrating as I already set random_state to a specific number, 25 when building the datasets. However this wasn't enough, I had to create seed=SEED where SEED=25 a number of times to try and keep the notebook as reproducible as possible. I set the os.environ['PYTHONHASHSEED'] = str(SEED) and os.environ['TF_DETERMINISTIC_OPS'] = '1' and set random.seed, np.random.seed, tf.random.set_seed all to SEED. My conclusion is there will always be an issue with trying to reproduce model performance when fitting or evaluating the test set. I believe I tried to control the outcome as much as possible and even though the result might be different, one evaluation would not be too dissimilar from another evaluation when running the same evaluation on different days.
 
-- You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
+### Slug Size:
+
+Slug Size did become an issue, it might be due to the size of my model as it is a CNN model with 839,105 parameters, however after i downloaded it, it was only 10MBs in size. It is still a large file however the slugsize was over 500MB which caused difficult issues when uploading to heroku. To combat this I added the inputs folder (containing the kaggle dataset) to my gitignore and slugignore files. However this wasn't enough, I ended up having to add my final model to the gitignore and slugignore file as well and then load it in from a seperate source. I first tried google drive, however it worked when running the steamlit app from the terminal, however when trying to deploy on heroku it couldn't download the model. I then opted for using a [hugging face space](https://huggingface.co/) as it works better when trying to deploy with heroku. This proved successful and I was able to successfully deploy my app to heroku and have the final model available. 
 
 
 ## Deployment
