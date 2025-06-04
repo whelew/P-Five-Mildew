@@ -99,9 +99,9 @@ A CNN model trained on cherry leaf images can reliably distinguish between healt
 - A project summary page: showing the project dataset summary and the client's requirements.
 - A page listing your findings related to a study to visually differentiate a cherry leaf that is healthy from one that contains a powdery mildew.
 - A page containing:
-- - A link to download a set of cherry leave images for live prediction.
-- - A user interface with a file uploader widget, the user should be allowed to upload multiple images. Each image will be displayed along with a prediction statement indicating whether the cherry leaf is healthy or contains powdery mildew and the probability associated with this statement. 
-- - A table with the image name and prediciton results, along with a download button to download the table.
+- A link to download a set of cherry leave images for live prediction.
+- A user interface with a file uploader widget, the user should be allowed to upload multiple images. Each image will be displayed along with a prediction statement indicating whether the cherry leaf is healthy or contains powdery mildew and the probability associated with this statement. 
+- A table with the image name and prediciton results, along with a download button to download the table.
 - A page indicating your project hypothesis and how you validated it across the project. 
 - A technical page displaying model performance.
 
@@ -124,8 +124,6 @@ A CNN model trained on cherry leaf images can reliably distinguish between healt
 - You will need to mention unfixed bugs and why they were unfixed. This section should include shortcomings of the frameworks or technologies used. Although time can be a significant variable for consideration, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed.
 
 
-
-
 ## Deployment
 
 ### Heroku
@@ -143,7 +141,28 @@ A CNN model trained on cherry leaf images can reliably distinguish between healt
 
 ## Main Data Analysis and Machine Learning Libraries
 
-- Here, you should list the libraries used in the project and provide an example(s) of how you used these libraries.
+### [Numpy]():
+- Used to handle image arrays and numerical operations, normalisation.
+- Example: np.array(img) / 255.0
+### [Pandas]():
+- This was used to manage and manipualte datasets, such as image paths, labels, CSV logs. 
+- Example: pd.read_csv('outputs/logs/final_model_history.csv')
+### [Matplotlib]():
+- Matplotlib was used for image plotting during image analysis, along with performance metrics, training history plots.
+- Example: plt.imshow(avg_image) 
+### [Seaborn]():
+- This was used to create advanced plot during label distribution visualisation.
+- Example: sns.countplot(x=y_labels)
+### [Tensorflow]():
+- This was used to build, tune, train and evaluate my convolutional neural network (CNN) model.
+- Example: keras.tuner, tuner.search(), model.fit(), load_model()
+### [Scikit Learn]():
+- This was used for classificaiton reports, cross validation, confusion matrixs.
+- Example: from sklearn.model_selection import StratifiedKFold, skf = StratifiedKFold(n_splits=5, shuffle=True, random_state=SEED) 
+### [PIL]():
+- This was used to load and preprocess images.
+- Example: Image.open(image_path).convert('RGB')
+### []
 
 ## Credits
 
