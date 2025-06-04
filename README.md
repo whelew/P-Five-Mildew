@@ -64,17 +64,17 @@ To save time in this process, the IT team suggested an ML system that detects in
 
 #### Ethical or Privacy concerns?
 
-- The client provided the data under an NDA (non-disclosure agreement), therefore the data should only be shared with professional that are officially involved in the project.
+- The client provided the data under an NDA (non-disclosure agreement), therefore the data should only be shared with professionals that are officially involved in the project.
 
 #### What level of prediction performance is needed? 
 
-- The client has agreed upon a 97% level of predicition for the performance metric accuracy. 
+- The client has agreed upon a 97% level of prediction for the performance metric accuracy. 
 
 #### What are the project inputs and intended outputs?
 
 
 
-#### Does the data suggest a particualr model?
+#### Does the data suggest a particular model?
 
 - The data provided suggests a binary classification model, since there will be two classifications, Healthy or Infected with Mildew.
 - This will be class 0 for Healthy and class 1 for Containing Mildew.
@@ -106,18 +106,9 @@ A CNN model trained on cherry leaf images can reliably distinguish between healt
 - A page containing:
 - A link to download a set of cherry leave images for live prediction.
 - A user interface with a file uploader widget, the user should be allowed to upload multiple images. Each image will be displayed along with a prediction statement indicating whether the cherry leaf is healthy or contains powdery mildew and the probability associated with this statement. 
-- A table with the image name and prediciton results, along with a download button to download the table.
+- A table with the image name and prediction results, along with a download button to download the table.
 - A page indicating your project hypothesis and how you validated it across the project. 
 - A technical page displaying model performance.
-
-
-## The rationale to map the business requirements to the Data Visualisations and ML tasks
-
-- List your business requirements and a rationale to map them to the Data Visualisations and ML tasks.
-
-## ML Business Case
-
-- In the previous bullet, you potentially visualised an ML task to answer a business requirement. You should frame the business case using the method we covered in the course. 
 
 ## Dashboard Design
 
@@ -140,13 +131,13 @@ This section provides the client with:
 ### ML Performance Metrics
 
 This section highlights and details the detailed length of model training.
-- Originally used columns for navigation and layouy, however this caused the information to be difficult to read so a radio option was added instead, this allowed for easier and clearer navigation. 
+- Originally used columns for navigation and layout, however this caused the information to be difficult to read so a radio option was added instead, this allowed for easier and clearer navigation. 
 - It includes the best results from keras tuner during hyperparameter optimisation, the best hyperparameters were used as the main values for the final model.
 - Plots of training and validation accuracy for: 
 1. The best_model (tuner.search() model).
 2.  The cross validation model (using best_model hyperparameters).
 3. The final model, trained using a full dataset (combination of train and validation sets).
-- The cross validation model also provides metrics confirming generalisation performance over multipel folds.
+- The cross validation model also provides metrics confirming generalisation performance over multiple folds.
 - Classification Report and a Confusion Matrix for the best_model, cross_val_model and final_model.
 
 
@@ -164,7 +155,7 @@ One difficulty during the building and training of the model was reproducibility
 
 ### Slug Size:
 
-Slug Size did become an issue, it might be due to the size of my model as it is a CNN model with 839,105 parameters, however after i downloaded it, it was only 10MBs in size. It is still a large file however the slugsize was over 500MB which caused difficult issues when uploading to heroku. To combat this I added the inputs folder (containing the kaggle dataset) to my gitignore and slugignore files. However this wasn't enough, I ended up having to add my final model to the gitignore and slugignore file as well and then load it in from a seperate source. I first tried google drive, however it worked when running the steamlit app from the terminal, however when trying to deploy on heroku it couldn't download the model. I then opted for using a [hugging face space](https://huggingface.co/) as it works better when trying to deploy with heroku. This proved successful and I was able to successfully deploy my app to heroku and have the final model available. 
+Slug Size did become an issue, it might be due to the size of my model as it is a CNN model with 839,105 parameters, however after i downloaded it, it was only 10MBs in size. It is still a large file however the slugsize was over 500MB which caused difficult issues when uploading to heroku. To combat this I added the inputs folder (containing the kaggle dataset) to my gitignore and slugignore files. However this wasn't enough, I ended up having to add my final model to the gitignore and slugignore file as well and then load it in from a separate source. I first tried google drive, however it worked when running the streamlit app from the terminal, however when trying to deploy on heroku it couldn't download the model. I then opted for using a [hugging face space](https://huggingface.co/) as it works better when trying to deploy with heroku. This proved successful and I was able to successfully deploy my app to heroku and have the final model available. 
 
 
 ## Deployment
@@ -233,4 +224,4 @@ Here is a list of documents I used to help create my project.
 
 - The Code Institute modules were very useful in helping understand workflow and structure of my jupyter notebook. 
 - The Code Institute [mildew detection template](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+PA_PAGPPF+2/courseware/bde016cdbd184cdeafd341a73807e138/bd2104eb84de4e48a9df6f685773cbf2/) was a very helpful base for the readme file, I also use the recommended business case.
-- The Code Institute Walkthrough [malria detector](https://learn.codeinstitute.net/courses/course-v1:code_institute+CI_DA_ML+3/courseware/07a3964f7a72407ea3e073542a2955bd/29ae4b4c67ed45a8a97bb9f4dcfa714b/) project also gave insight for structure and general code practice of jupyter notebooks.
+- The Code Institute Walkthrough [malaria detector](https://learn.codeinstitute.net/courses/course-v1:code_institute+CI_DA_ML+3/courseware/07a3964f7a72407ea3e073542a2955bd/29ae4b4c67ed45a8a97bb9f4dcfa714b/) project also gave insight for structure and general code practice of jupyter notebooks.
